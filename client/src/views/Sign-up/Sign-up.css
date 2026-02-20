@@ -1,0 +1,50 @@
+.SignUp{
+    font-size: x-large;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: black;
+    grid-column: 1/-1;
+    justify-content: center;
+    align-items: center;
+    max-width: 70vh;
+    margin-left: 32vw;
+    margin-top: 5vw;
+    padding: 5vh;
+}
+
+.SignUp form{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: baseline;
+    gap:5vh;
+}
+
+.InputLabel{
+    display: flex;
+    flex-direction: column;
+    width: 50vh;
+    gap:2vh
+}
+
+input{
+    background-color: rgb(59, 58, 58);
+    border: 0px;
+    height: 3vh;
+    border-radius: 8px;
+    font-size: large;
+    padding-left: 1vh;
+}
+
+input::placeholder{
+    text-align: justify;
+    padding-left: 1vh;
+    font-size: large;
+}
+
+
+.ToastDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}

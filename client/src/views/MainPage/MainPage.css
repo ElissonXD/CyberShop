@@ -1,0 +1,16 @@
+.MainPage{
+    display:grid;
+    grid-column: 1 / -1;
+    margin-top: 5vh;
+    margin-right: 3vh;
+    grid-template-columns: 1fr 4fr ;
+    gap: 1vh;
+
+}
+
+.Items{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 3vh;
+    grid-column: 2;
+}

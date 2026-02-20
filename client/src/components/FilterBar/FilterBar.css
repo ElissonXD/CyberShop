@@ -1,0 +1,87 @@
+.FilterBar{
+    grid-column: 1/1;
+    padding:5vh;
+    padding-top: 0vh;
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+}
+
+.FilterBar h2{
+    margin: 0;
+    margin-bottom: 5vh;
+}
+
+.Options{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.radiolabel{
+    display: flex;
+    gap: 5vh;
+    align-items: center;
+}
+
+.radiolabel input[type = "radio"]{
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #911A1A
+}
+
+.radiolabel input[type = "radio"]:checked{
+    border-color: rgb(92, 17, 17);
+}
+
+.radiolabel input[type = "radio"]:hover{
+    border-color: white;
+}
+
+
+.radiolabel input[type="radio"]:checked::after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    display: block;
+    
+}
+
+.FilterBar form{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+
+.FilterBar legend{
+    font-size: larger;
+    font-weight: 700;
+}
+
+.PriceRange{
+    display: flex;
+    gap: 5vh;
+}
+
+.PriceRange input[type="number"]{
+    border:2px solid #911A1A
+}
+
+.PriceRange input[type="number"]:focus,
+.PriceRange input[type="number"]:hover{
+    border:2px solid white
+}
+
+.FilterBar .InputLabel{
+    max-width: 12vh;
+}

@@ -1,0 +1,101 @@
+.Header{
+    display: flex;
+    grid-column: 1/ -1;
+    background-color: rgb(219, 72, 72);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0vh 5vh 0vh 5vh ;
+    max-height: 10vh;
+}
+
+.HeaderText{
+    font-size: xx-large;
+    font-weight: 500;
+    font-style: italic;
+    color: white;
+}
+
+.HeaderOptions{
+    display: flex;
+    align-items: center;
+    gap: 4vh;
+}
+
+.HeaderName{
+    font-size: x-large;
+    font-weight: 400;
+}
+
+.SearchBar{
+    display: flex;
+    align-items: center;
+    gap: 3vh;
+    background-color: rgb(59, 58, 58);
+    border: 0px;
+    height: 4vh;
+    width: 100vh;
+    border-radius: 8px;
+    font-size: large;
+    padding-left: 1vh;
+    transition: ease 0.25s;
+
+}
+.SearchBar:hover{
+    outline: 4px solid black;
+    cursor: pointer;
+}
+
+.SearchBar img{
+    width: 3vh;
+    height: 3vh;
+}
+
+.CartIMG{
+    position: relative;
+    display: inline-block;
+}
+
+.CartIMG img{
+    width: 5vh;
+    display: block;
+}
+
+.CartPop{
+    position: absolute;
+    top: -5px;
+    right: -18px;
+    border-radius: 100%;
+    text-align: center;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    font-size: smaller;
+}
+
+.CartIMG img:hover{
+    filter: brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(7497%) hue-rotate(241deg) brightness(102%) contrast(103%);
+    cursor: pointer;
+}
+
+.SearchBar input{
+    background-color: none;
+    width: 100vh;
+}
+
+.SearchBar input:focus{
+    outline: none;
+}
+
+.Header .pfp{
+    width: 40px;
+    height: 40px;
+    align-self: center;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.Header .pfp:hover{
+    cursor: pointer;
+}

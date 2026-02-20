@@ -1,0 +1,51 @@
+.HistoryBox{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    width: 100vh;
+}
+
+.Top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10vh;
+}
+
+.Top div{
+    font-weight: 700;
+}
+
+.Chevron{
+    cursor: pointer;
+}
+
+.Chevron:hover{
+    color: red;
+}
+
+.HistoryBox .Content{
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+    justify-content: space-between;
+    background-color: rgb(151, 62, 62);
+    padding: 3vh;
+    align-items: center;
+    gap:10vh;
+    border-radius: 8px;
+}
+
+.HistoryBox .Content img{
+    width: 10vh;
+}
+
+.HistoryBox .ContentItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5vh;
+
+}

@@ -1,0 +1,28 @@
+.ItemBox{
+    display: flex;
+    border-radius: 8px;
+    gap: 5vh;
+    padding: 2vh;
+    background-color: rgb(97, 15, 15);
+    min-width: fit-content;
+    
+}
+
+.ItemBox img{
+    width: 25vh;
+    height: 30vh;
+    justify-self: center;
+    align-self: center;
+}
+
+.ItemTitle{
+    font-weight: 700;
+    font-size: x-large;
+}
+
+.ItemContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5vh;
+}

@@ -1,0 +1,58 @@
+.CartBox{
+    display: grid;
+    grid-template-columns: 2fr 1fr 0.5fr;
+    background-color: rgb(97, 15, 15);
+    border-radius: 8px;
+    padding: 3vh;
+    justify-content: space-between;
+    border: 1vh solid black;
+}
+
+.CartContent{
+    grid-column: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5vh;
+}
+
+.CartContent img{
+    width: 10vh;
+    height: 10vh;
+    align-self: center;
+}
+
+.TitleCart{
+    font-weight: 700;
+    text-align: justify;
+    font-size: large;
+}
+
+.PriceCart{
+    font-weight: 600;
+    font-size: large;
+}
+
+.Increment{
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+
+.Trash{
+    grid-column: 3;
+    align-self: center;
+    justify-self: center;
+}
+
+.Trash img{
+    width: 5vh;
+    height: 5vh;
+    cursor: pointer;
+}
+
+.Trash img:hover{
+    filter: brightness(0) saturate(100%) invert(18%) sepia(70%) saturate(6150%) hue-rotate(355deg) brightness(94%) contrast(122%);
+}
