@@ -23,7 +23,7 @@
 .InputLabel{
     display: flex;
     flex-direction: column;
-    width: 50vh;
+    max-width: 50vh;
     gap:2vh
 }
 
@@ -47,4 +47,19 @@ input::placeholder{
     display: flex;
     flex-direction: column;
     gap: 1vh;
+}
+
+@media (max-width: 600px) {
+    .SignUp{
+        max-width: 30vh;
+        margin-left: 11vw;
+        margin-top: 5vw;
+    }
+
+    .InputLabel{
+        display: flex;
+        flex-direction: column;
+        max-width: 25vh;
+        gap:2vh
+    }
 }

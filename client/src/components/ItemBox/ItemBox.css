@@ -4,13 +4,12 @@
     gap: 5vh;
     padding: 2vh;
     background-color: rgb(97, 15, 15);
-    min-width: fit-content;
     
 }
 
 .ItemBox img{
-    width: 25vh;
-    height: 30vh;
+    max-width: 25vh;
+    min-height: 30vh;
     justify-self: center;
     align-self: center;
 }
@@ -25,4 +24,24 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 5vh;
+}
+
+@media (max-width: 600px){
+    .ItemBox{
+        gap: 2vh;
+    }
+
+    .ItemBox img{
+        max-width: 10vh;
+        min-height: 15vh;
+    }
+    .ItemTitle{
+        font-size: large;
+    }
+
+    .ItemContent{
+        font-size: small;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
 }

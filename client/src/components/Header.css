@@ -5,7 +5,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0vh 5vh 0vh 5vh ;
-    max-height: 10vh;
+    min-height: 10vh;
 }
 
 .HeaderText{
@@ -32,8 +32,8 @@
     gap: 3vh;
     background-color: rgb(59, 58, 58);
     border: 0px;
-    height: 4vh;
-    width: 100vh;
+    min-height: 4vh;
+    max-width: 100vh;
     border-radius: 8px;
     font-size: large;
     padding-left: 1vh;
@@ -81,7 +81,7 @@
 
 .SearchBar input{
     background-color: none;
-    width: 100vh;
+    max-width: 100vh;
 }
 
 .SearchBar input:focus{
@@ -94,8 +94,58 @@
     align-self: center;
     border: 1px solid black;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .Header .pfp:hover{
     cursor: pointer;
+}
+
+@media (max-width: 600px){
+    .Header{
+        padding: 0vh 0vh 0vh 0vh;
+        justify-content: space-evenly;
+        gap:1vh;
+    }
+
+    .SearchBar{
+        gap:0vh;
+    }
+
+    .SearchBar img{
+        width: 2vh;
+        height: 2vh;
+    }
+
+    .SearchBar input{
+        background-color: none;
+        max-width: 10vh;
+    }
+
+    .SearchBar input::placeholder{
+        font-size: x-small;
+    }
+
+    .HeaderText{
+        font-size: large;
+    }
+
+    .HeaderName{
+        font-size: medium;
+    }
+
+    .HeaderOptions{
+        gap: 0.5vh;
+    }
+
+    .CartPop{
+        padding: 0;
+        top: -8px;
+        right: -8px;
+    }
+
+    .CartIMG img{
+        width: 3vh;
+        display: block;
+    }
 }

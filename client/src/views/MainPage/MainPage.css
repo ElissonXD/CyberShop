@@ -14,3 +14,17 @@
     gap: 3vh;
     grid-column: 2;
 }
+
+@media (max-width: 600px){
+    .Items{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .MainPage{
+        display: flex;
+        flex-direction: column;
+        padding: 3vh;
+        margin-right:0vh;
+    }
+}
