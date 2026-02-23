@@ -41,3 +41,12 @@ input::placeholder{
     padding-left: 1vh;
     font-size: large;
 }
+
+@media (max-width: 600px){
+    .Login{
+        max-width: 30vh;
+        margin-left: 10vw;
+        margin-top: 5vw;
+    }
+    
+}

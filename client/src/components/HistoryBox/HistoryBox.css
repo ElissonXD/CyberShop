@@ -1,18 +1,19 @@
 .HistoryBox{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
     padding: 1.5rem;
     background-color: #1a1a1a;
     border-radius: 8px;
     width: 100vh;
+    max-width: 1200px;
 }
 
 .Top{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10vh;
+    gap: 5vh;
 }
 
 .Top div{
@@ -20,6 +21,8 @@
 }
 
 .Chevron{
+    height: 5vh;
+    width: 8vh;
     cursor: pointer;
 }
 
@@ -34,7 +37,7 @@
     background-color: rgb(151, 62, 62);
     padding: 3vh;
     align-items: center;
-    gap:10vh;
+    gap:5vh;
     border-radius: 8px;
 }
 
@@ -46,6 +49,48 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 5vh;
+    gap: 3vh;
+    
 
+}
+
+@media(max-width:600px){
+
+    .Chevron{
+        height: 10vh;
+        width: 10vh;
+    }
+
+    .HistoryBox{
+        display: flex;
+        flex-direction: column;
+        max-width: fit-content;
+    }
+
+    .Top{
+        gap: 1vh;
+    }
+
+    .HistoryBox .Content{
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    .HistoryBox .ContentItem{
+        flex-direction: column;
+        align-items: baseline;
+        max-width: 25vh;
+    }
+}
+
+
+@media(max-width: 1000px){
+    .HistoryBox{
+        max-width: fit-content;
+    }
+
+    .HistoryBox .Content{
+        max-width: fit-content;
+    }
 }

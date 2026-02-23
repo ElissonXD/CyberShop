@@ -100,7 +100,6 @@ function Profile(){
             {(!error && !loading ) && ( <>
             <div className='ProfileTitle'>
                 <h2>Profile</h2>
-                <h2>{select === 0 ? "Information": "Purchases History"}</h2>
             </div>
             <div className='SideBar'>
                 {user?.picture_url ? (<img src = {user.picture_url} className='pfp'/>) : <UserRound className='pfp'/>}

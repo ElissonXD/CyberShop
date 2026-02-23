@@ -3,9 +3,10 @@
     grid-template-columns: 2fr 1fr 0.5fr;
     background-color: rgb(97, 15, 15);
     border-radius: 8px;
-    padding: 3vh;
+    padding: 5vh;
     justify-content: space-between;
     border: 1vh solid black;
+    min-height: fit-content;
 }
 
 .CartContent{
@@ -55,4 +56,16 @@
 
 .Trash img:hover{
     filter: brightness(0) saturate(100%) invert(18%) sepia(70%) saturate(6150%) hue-rotate(355deg) brightness(94%) contrast(122%);
+}
+
+@media(max-width:600px){
+    .CartBox{
+        display: block;
+
+    }
+
+    .CartContent{
+        flex-direction: column;
+        
+    }
 }

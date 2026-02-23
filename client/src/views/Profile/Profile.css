@@ -123,3 +123,28 @@
     background-color: red;
     color: black;
 }
+
+
+@media(max-width:600px){
+    .Profile{
+        display: flex;
+        flex-direction: column;
+        margin-left: 10vw;
+    }
+
+    .SideBar{
+        border-right: 0px;
+    }
+
+    .InformationBar{
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+    }
+}
+
+@media(max-width: 1000px){
+    .Profile{
+        margin-left: 10vw;
+    }
+}
