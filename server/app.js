@@ -4,6 +4,7 @@ const initializePassport = require("./middlewares/passport")
 const passport = require('passport')
 const authentication = require('./middlewares/authentication')
 const dotenv = require('dotenv')
+const cors = require("cors")
 
 // Routes
 const signUp = require("./routes/sign-up")
@@ -29,6 +30,16 @@ app.use(session({
 }))
 app.use(passport.initialize())
 app.use(passport.session())
+
+//Setup Cors
+
+const corsOptions = {
+    credentials: true,
+    origin: [process.env.VITE_API_URL]
+}
+
+app.use(cors(corsOptions))
+
 
 app.get("/api", (req, res) =>{
     console.log("sending")

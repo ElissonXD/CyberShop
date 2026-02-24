@@ -7,6 +7,7 @@ import Header from './components/Header'
 import { Outlet } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast'
 import axios from 'axios'
+const apiUrl = import.meta.env.VITE_API_URL;
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
 
   useEffect(() => {
     const req = async () => {
-      const res = await axios.get("/api/check");
+      const res = await axios.get(apiUrl + "/api/check");
 
       if (res.data.success){
         setUser(res.data.user)

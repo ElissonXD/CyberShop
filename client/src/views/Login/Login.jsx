@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import './Login.css'
 import { UserContext } from "../../contexts/UserContext";
+const apiUrl = import.meta.env.API_URL;
 
 function Login() {
 
@@ -30,7 +31,7 @@ function Login() {
     async function handlePost(e){
         e.preventDefault()
 
-        const postpromisse = axios.post("/api/login", data)
+        const postpromisse = axios.post(apiUrl + "/api/login", data)
 
         toast.promise(postpromisse, {
             success: "Logged in!",

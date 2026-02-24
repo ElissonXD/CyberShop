@@ -5,6 +5,7 @@ import { UserContext } from '../../contexts/UserContext'
 import { redirect, useNavigate } from 'react-router'
 import toast from 'react-hot-toast'
 import CartBox from '../../components/CartBox/CartBox'
+const apiUrl = import.meta.env.API_URL;
 
 function Cart(){
     const {login, total, setTotal, loading} = useContext(UserContext)
@@ -16,7 +17,7 @@ function Cart(){
 
          const req = async () => {
             try {
-                const res = await axios.get('api/cart')
+                const res = await axios.get(apiUrl + 'api/cart')
     
                 setData(res.data) 
             } catch(error){
@@ -58,7 +59,7 @@ function Cart(){
         setTotal(0)
 
         try{
-            const res = await axios.delete('/api/cart')
+            const res = await axios.delete(apiUrl + '/api/cart')
         }catch(error){
             toast.error("Failed to update cart")
             setData(prevData)
@@ -72,7 +73,7 @@ function Cart(){
         const nextquanitty = item.quantity + 1;
         updateCartItem(item.id, nextquanitty)
         try{
-            const res = await axios.patch('/api/cart', {...item, value: item.quantity + 1})
+            const res = await axios.patch(apiUrl + '/api/cart', {...item, value: item.quantity + 1})
             
         }catch(error){
             toast.error("Failed to update value")
@@ -86,7 +87,7 @@ function Cart(){
             updateCartItem(item.id, nextquanitty)
 
             try{
-                const res = await axios.patch('/api/cart', {...item, value: item.quantity - 1})
+                const res = await axios.patch(apiUrl + '/api/cart', {...item, value: item.quantity - 1})
             
             }catch(error){
                 toast.error("Failed to update value")
@@ -102,7 +103,7 @@ function Cart(){
         setTotal(total - 1)
 
         try{
-            const res = await axios.patch('/api/cart', {...item, value: 0})
+            const res = await axios.patch(apiUrl + '/api/cart', {...item, value: 0})
         
         }catch(error){
             toast.error("Failed to update value")
@@ -117,7 +118,7 @@ function Cart(){
             return toast.error("Your cart is empty!")
         }
 
-        const postPromisse = axios.post('/api/history')
+        const postPromisse = axios.post(apiUrl + '/api/history')
 
         toast.promise(postPromisse, {
             success: "Sucessefull purchase!",

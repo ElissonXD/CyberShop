@@ -6,6 +6,7 @@ import axios from 'axios'
 import HistoryBox from '../../components/HistoryBox/HistoryBox'
 import toast from 'react-hot-toast'
 import { UserRound } from 'lucide-react';
+const apiUrl = import.meta.env.API_URL;
 
 function Profile(){
 
@@ -23,7 +24,7 @@ function Profile(){
         setLoading(true)
          const req = async () => {
             try {
-                const res = await axios.get('/api/history')
+                const res = await axios.get(apiUrl + '/api/history')
     
                 setData(res.data) 
             } catch(error){
@@ -44,7 +45,7 @@ function Profile(){
 
     function handlePfp(e){
         e.preventDefault()
-        const postPromisse = axios.post('/api/profile', {picture: pfp})
+        const postPromisse = axios.post(apiUrl + '/api/profile', {picture: pfp})
         toast.promise(postPromisse, {
             success: "Changed picture! Refresh to see changes",
             error: "Failed to change the picture",
@@ -63,7 +64,7 @@ function Profile(){
     }
 
     function handleLogout(){
-        const postPromisse = axios.get('/api/profile')
+        const postPromisse = axios.get(apiUrl + '/api/profile')
         toast.promise(postPromisse, {
             success: "Logged out!",
             error: "Failed to log out",

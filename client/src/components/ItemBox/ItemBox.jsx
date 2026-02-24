@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useContext } from 'react'
 import toast from 'react-hot-toast'
 import { UserContext } from '../../contexts/UserContext'
+const apiUrl = import.meta.env.API_URL;
 
 
 function ItemBox({item}){
@@ -13,7 +14,7 @@ function ItemBox({item}){
         if (login){
 
             try {
-                const postPromisse = axios.post('/api/cart', item)
+                const postPromisse = axios.post(apiUrl + '/api/cart', item)
                 toast.promise(postPromisse, {
                     success:"Item added to the cart!",
                     error: "Could not add the item to the cart",

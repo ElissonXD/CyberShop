@@ -4,21 +4,21 @@ import ItemBox from "../../components/ItemBox/ItemBox"
 import './MainPage.css'
 import { SearchContext } from "../../contexts/SearchContext"
 import FilterBar from "../../components/FilterBar/FilterBar"
+const apiUrl = import.meta.env.VITE_API_URL;
 
 function MainPage(){
-    
+
     const {search} = useContext(SearchContext)
     const [filter, setFilter] = useState({category:'', min:'', max:''})
 
     const [items, setItems] = useState([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(false)
-
     useEffect(() => {
         setLoading(true)
         const req = async () => {
             try {
-                const res = await axios.post('/api/fakestore', {search, filter})
+                const res = await axios.post(apiUrl + '/api/fakestore', {search, filter})
                 setItems(res.data)
             } catch (error){
                 setError(true)

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom"
 import axios from "axios"
 import toast from "react-hot-toast"
 import { UserContext } from "../../contexts/UserContext"
+const apiUrl = import.meta.env.API_URL;
 
 function SignUp() {
 
@@ -31,7 +32,7 @@ function SignUp() {
 
     async function handlePost(e){
         e.preventDefault()
-        const postpromisse = axios.post("/api/sign-up", data);
+        const postpromisse = axios.post(apiUrl + "/api/sign-up", data);
         
         toast.promise(postpromisse, {
             loading: 'Creating user...',
