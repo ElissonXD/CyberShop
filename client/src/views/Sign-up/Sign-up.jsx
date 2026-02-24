@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 import axios from "axios"
 import toast from "react-hot-toast"
 import { UserContext } from "../../contexts/UserContext"
-const apiUrl = import.meta.env.API_URL;
+const apiUrl = import.meta.env.VITE_API_URL;
 
 function SignUp() {
 
