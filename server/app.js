@@ -3,6 +3,7 @@ const session = require("express-session")
 const initializePassport = require("./middlewares/passport")
 const passport = require('passport')
 const authentication = require('./middlewares/authentication')
+const dotenv = require('dotenv')
 
 // Routes
 const signUp = require("./routes/sign-up")
@@ -48,6 +49,6 @@ app.use('/api/history', history)
 
 app.use("/api/profile", profile)
 
-app.listen( 5000, () => {
+app.listen( process.env.PORT, () => {
     console.log('Server on!')
 })
