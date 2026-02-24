@@ -5,7 +5,7 @@ import { UserContext } from '../../contexts/UserContext'
 import { redirect, useNavigate } from 'react-router'
 import toast from 'react-hot-toast'
 import CartBox from '../../components/CartBox/CartBox'
-const apiUrl = import.meta.env.API_URL;
+const apiUrl = import.meta.env.VITE_API_URL;
 
 function Cart(){
     const {login, total, setTotal, loading} = useContext(UserContext)

@@ -6,7 +6,7 @@ import axios from 'axios'
 import HistoryBox from '../../components/HistoryBox/HistoryBox'
 import toast from 'react-hot-toast'
 import { UserRound } from 'lucide-react';
-const apiUrl = import.meta.env.API_URL;
+const apiUrl = import.meta.env.VITE_API_URL;
 
 function Profile(){
 
