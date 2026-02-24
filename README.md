@@ -59,9 +59,10 @@ DB_DATABASE=cybershop
 DB_PASSWORD=your_password
 DB_PORT=5432
 PORT = your_port
+VITE_API_URL = #you should insert here the frontend domain, it's probably http://localhost:5173
 
 # FrontEnd
-VITE_API_URL=http://localhost:your_port
+VITE_API_URL= #insert here the backend domain, basically http://localhost:your_port
 ````
 
 ### Installation
