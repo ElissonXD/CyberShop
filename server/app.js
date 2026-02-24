@@ -20,12 +20,13 @@ initializePassport(passport)
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(session({
-    secret: "something", //change later
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,
     cookie: {
-        secure: false,
-        httpOnly: true
+        secure: true,
+        httpOnly: true,
+        sameSite: 'none'
     }
 }))
 app.use(passport.initialize())

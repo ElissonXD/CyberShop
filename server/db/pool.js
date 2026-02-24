@@ -3,7 +3,6 @@ const dotenv = require('dotenv')
 
 dotenv.config()
 
-// ALTERAR DEPOIS
 
 module.exports = new Pool({
   host: process.env.DB_HOST,
