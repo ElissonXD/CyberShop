@@ -2,6 +2,7 @@ async function getItems(req, res) {
     try{
         const {search, filter} = req.body
         console.log(filter)
+        console.log(req.session)
 
         const response = await fetch('https://fakestoreapi.com/products')
         

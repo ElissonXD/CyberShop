@@ -23,7 +23,7 @@ async function getCart(req, res) {
 
         return res.status(200).json({cart: req.session.cart, price: price})
     } else {
-        console.log(req.session)
+        
         return res.status(400).json({errors: "not logged in"})
     }
 }
