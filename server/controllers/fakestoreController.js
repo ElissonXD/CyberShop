@@ -3,14 +3,7 @@ async function getItems(req, res) {
         const {search, filter} = req.body
         console.log(filter)
 
-        const response = await fetch('https://fakestoreapi.com/products', {
-    method: 'GET',
-    headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
-        'Accept': 'application/json',
-        'Referer': 'https://fakestoreapi.com/'
-    }
-});
+        const response = await fetch('https://fakestoreapi.com/products')
         
         if (!response.ok){
             console.log(response)
