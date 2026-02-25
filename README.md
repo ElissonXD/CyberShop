@@ -23,11 +23,14 @@ A fullstack web development project that simulates a virtual shop website, allow
 ### Frontend
 * **React.js + Vite**
 * **Axios**
+* **React Router Dom**
 * **React Hot Toast**
 * **Lucide React**
 
 ### Backend
 * **Node.js & Express**
+* **PG**
+* **Express Session**
 * **Passport.js**
 * **Bcrypt**
 * **Express Validator**
@@ -60,6 +63,8 @@ DB_PASSWORD=your_password
 DB_PORT=5432
 PORT = your_port
 VITE_API_URL = #you should insert here the frontend domain, it's probably http://localhost:5173
+SECURE = "false"
+SAMESITE = "lax"
 
 # FrontEnd
 VITE_API_URL= #insert here the backend domain, basically http://localhost:your_port
