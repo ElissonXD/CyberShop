@@ -24,6 +24,8 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 5vh;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 @media (max-width: 600px){
