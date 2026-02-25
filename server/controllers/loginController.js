@@ -10,7 +10,7 @@ function logUser(req, res, next) {
 
         req.login(user, (err) => {
             if (err) return res.status(400).json({success: false, errors: "Failed to login, please try again later"})
-            console.log(req.user)
+            
             if (!req.session.cart) {
                  req.session.cart = [];
             }

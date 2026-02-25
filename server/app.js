@@ -25,15 +25,14 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
     cookie: {
-        secure: true,
+        secure: "false" === process.env.SECURE ? false : true,
         httpOnly: true,
-        sameSite: 'none'
+        sameSite: process.env.SAMESITE,
+        maxAge: 1000 * 60 * 60 * 24
     }
 }))
 app.use(passport.initialize())
 app.use(passport.session())
-
-//Setup Cors
 
 const corsOptions = {
     credentials: true,

@@ -1,16 +1,11 @@
+const fakestore = require("../db/fakestoredb")
+
 async function getItems(req, res) {
     try{
         const {search, filter} = req.body
         console.log(filter)
 
-        const response = await fetch('https://fakestoreapi.com/products')
-        
-        if (!response.ok){
-            console.log(response)
-            return res.status(400).json({errors: "Failed to fetch the API"})
-        }
-
-        let data = await response.json()
+        let data = fakestore.fakestore()
         
  
         if (search) data = data.filter(item => item.title.toLowerCase().includes(search.toLowerCase()))
