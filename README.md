@@ -8,6 +8,14 @@ A fullstack web development project that simulates a virtual shop website, allow
 
 ---
 
+## Live Demo
+
+**Link**: https://cybershop-36ri.onrender.com
+
+> **NOTE**: This project uses a simplified registration process. For your privacy, please do not use real personal data or real passwords, as the system is intended for portfolio demonstration only.
+
+---
+
 ## Features
 
 * **User Accounts:** Create your own account with secure authentication.
@@ -23,11 +31,14 @@ A fullstack web development project that simulates a virtual shop website, allow
 ### Frontend
 * **React.js + Vite**
 * **Axios**
+* **React Router Dom**
 * **React Hot Toast**
 * **Lucide React**
 
 ### Backend
 * **Node.js & Express**
+* **PG**
+* **Express Session**
 * **Passport.js**
 * **Bcrypt**
 * **Express Validator**
@@ -60,6 +71,8 @@ DB_PASSWORD=your_password
 DB_PORT=5432
 PORT = your_port
 VITE_API_URL = #you should insert here the frontend domain, it's probably http://localhost:5173
+SECURE = "false"
+SAMESITE = "lax"
 
 # FrontEnd
 VITE_API_URL= #insert here the backend domain, basically http://localhost:your_port
