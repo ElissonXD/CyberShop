@@ -14,7 +14,7 @@ function logUser(req, res, next) {
             if (!req.session.cart) {
                  req.session.cart = [];
             }
-            console.log(req.session)
+
             return res.status(200).json({success: true, errors: null, user: req.user})
         })
     }) (req, res, next);
