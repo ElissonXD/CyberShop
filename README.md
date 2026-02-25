@@ -8,6 +8,14 @@ A fullstack web development project that simulates a virtual shop website, allow
 
 ---
 
+## Live Demo
+
+**Link**: https://cybershop-36ri.onrender.com
+
+> **NOTE**: This project uses a simplified registration process. For your privacy, please do not use real personal data or real passwords, as the system is intended for portfolio demonstration only.
+
+---
+
 ## Features
 
 * **User Accounts:** Create your own account with secure authentication.
