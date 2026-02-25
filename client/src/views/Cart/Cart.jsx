@@ -17,10 +17,11 @@ function Cart(){
 
          const req = async () => {
             try {
-                const res = await axios.get(apiUrl + 'api/cart')
+                const res = await axios.get(apiUrl + '/api/cart')
     
                 setData(res.data) 
             } catch(error){
+                
                 setError(true)
             }
     

@@ -2,11 +2,11 @@ async function getItems(req, res) {
     try{
         const {search, filter} = req.body
         console.log(filter)
-        console.log(req.session)
 
         const response = await fetch('https://fakestoreapi.com/products')
         
         if (!response.ok){
+            console.log(response)
             return res.status(400).json({errors: "Failed to fetch the API"})
         }
 
