@@ -15,6 +15,7 @@ const history = require('./routes/history')
 const profile = require('./routes/profile')
 
 const app = express()
+app.set('trust proxy', 1);
 
 initializePassport(passport)
 app.use(express.json());
