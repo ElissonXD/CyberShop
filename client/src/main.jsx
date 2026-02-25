@@ -12,6 +12,8 @@ import axios from 'axios'
 import Cart from './views/Cart/Cart.jsx'
 import Profile from './views/Profile/Profile.jsx'
 
+axios.defaults.withCredentials = true
+
 const router = createBrowserRouter([
 
   {
